@@ -1,0 +1,26 @@
+{
+  "name": "dragonbones-viewer",
+  "version": "0.0.1",
+  "description": "Cocos Creator dragonBones Viewer plugin.",
+  "author": "krapnik",
+  "main": "main.js",
+  "main-menu": {
+    "i18n:MAIN_MENU.package.title/dragonbones-viewer": {
+      "message": "dragonbones-viewer:open"
+    }
+  },
+  "panel.viewer": {
+    "main": "viewer/index.html",
+    "type": "simple",
+    "title": "dragonbones-viewer",
+    "width": 960,
+    "height": 960
+  },
+  "panel.list": {
+    "main": "panel/index.js",
+    "type": "dockable",
+    "title": "龙骨资源管理",
+    "width": 400,
+    "height": 300
+  }
+}

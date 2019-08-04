@@ -1,0 +1,35 @@
+<div id="warp" class="warp">
+    <section>
+        <h4>使用说明</h4>
+        <p>1.使用前请确定资源目录下存在龙骨导出资源文件</p>
+        <p>2.可以直接将龙骨导出资源文件同时拖拽至页面预览龙骨动画</p>
+        <p>龙骨导出资源文件一览=>【xxx_tex.png && xxx_ske.json && xxx_tex.json】</p>
+    </section>
+    <br />
+    <section class="form">
+        <ul>
+            <li>
+                <div class="path">路径 <i class="fa fa-refresh" aria-hidden="true" title="刷新" @click="searchRes"></i>
+                </div>
+                <div class="operating">操作</div>
+                <div class="controller"></div>
+            </li>
+            <li v-for="item in items">
+                <div class="path" :title="item.path">{{item.url}}</div>
+                <div class="controller">
+                    <i class="fa fa-eye" aria-hidden="true" title="预览" @click="view(item.path)"></i>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <br />
+
+    <div class="help" style="cursor:pointer;" @click="goHub">
+        <i class="fa fa-github"> https://github.com/krapnikkk/Creator-dragonBones-Viewer </i>
+    </div>
+
+    <div class="viewer" style="cursor:pointer;" @click="view()">
+        打开[dragonbones-viewer](拖拽龙骨导出资源进入页面即可预览龙骨动画)
+    </div>
+
+</div>
