@@ -39,14 +39,14 @@ var createVM = function (elem) {
         }
       },
       send() {
-        Editor.Ipc.sendToWins('view', this.path, function (error, answer) { });
+        Editor.Ipc.sendToWins('view', this.path);
       },
       searchRes() {
         this.items = [];
         Editor.assetdb.queryAssets('db://assets/**/*', 'texture', (err, assetInfos) => {
           for (let i = 0; i < assetInfos.length; ++i) {
             let item = assetInfos[i], path = item["path"], url = item["url"];
-            if (path.indexOf("_tex.png")>-1) {
+            if (path.indexOf("_tex.png") > -1) {
               this.items.push({
                 path: path,
                 url: url
